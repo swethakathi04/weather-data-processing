@@ -18,7 +18,7 @@ with DAG(
     dag_id="openweather_api_to_gcs",
     default_args=default_args,
     description="Fetch OpenWeather with Pandas+Requests in a venv, upload to GCS, trigger downstream DAG",
-    schedule_interval=None,
+    schedule=None,
     catchup=False,
     tags=["weather", "gcs"],
 ) as dag:
