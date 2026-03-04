@@ -23,7 +23,7 @@ with DAG(
     # Generate a unique batch ID using UUID
     batch_id = f"weather-data-batch-{str(uuid.uuid4())[:8]}"  # Shortened UUID for brevity
 
-    # Submit PySpark job to Dataproc Serverless
+    # Submit PySpark job to Dataproc Serverless compute
     batch_details = {
         "pyspark_batch": {
             "main_python_file_uri": f"gs://telecom_dataset/weather-data-gds/script/weather_data_processing.py",
