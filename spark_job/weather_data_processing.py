@@ -10,9 +10,9 @@ def main():
     dataset      = "forecast"
     table        = "weather_data"
     temp_bucket  = "bigq-temp"
-    bucket       = "weather-data-gds"
+    bucket       = "telecom_dataset"
     today        = datetime.date.today().strftime("%Y-%m-%d")
-    input_path   = f"gs://{bucket}/weather/{today}/forecast.csv"
+    input_path   = f"gs://{bucket}/weather-data-gds/{today}/forecast.csv"
 
     # —──────────── SPARK SESSION ───────────────────────────────────
     spark = (
